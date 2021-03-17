@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
+    <Authors>Borsuk Software</Authors>
+    <Company>Borsuk Software</Company>
+    <Description>Contains the framework and basic plugins for the object flattener library</Description>
+    <Copyright>2021 Borsuk Software</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>

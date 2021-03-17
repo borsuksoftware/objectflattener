@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
+    <Company>Borsuk Software</Company>
+    <Description>Contains the plugin to handle flattening instances of Json.net's deserialized objects</Description>
+    <Authors>Borsuk Software</Authors>
+    <Copyright>2021 Borsuk Software</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
+    <Description>Contains the plugin to handle flattening instances of System.Text.Json's deserialized objects</Description>
+    <PackageTags>t</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
+  </ItemGroup>
+
+</Project>

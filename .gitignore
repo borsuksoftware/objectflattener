@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/BorsukSoftware.ObjectFlattener.Core/bin
+/BorsukSoftware.ObjectFlattener.Core/obj
+/BorsukSoftware.ObjectFlattener.JsonDotNet/bin
+/BorsukSoftware.ObjectFlattener.JsonDotNet/obj
+/BorsukSoftware.ObjectFlattener.Tests/bin
+/BorsukSoftware.ObjectFlattener.Tests/obj
+/BorsukSoftware.ObjectFlattener.SystemTextJson/bin
+/BorsukSoftware.ObjectFlattener.SystemTextJson/obj
