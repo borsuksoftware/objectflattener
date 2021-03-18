@@ -8,6 +8,7 @@
     <Authors>Borsuk Software</Authors>
     <Copyright>2021 Borsuk Software</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

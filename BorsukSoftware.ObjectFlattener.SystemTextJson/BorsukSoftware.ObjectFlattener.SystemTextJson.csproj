@@ -4,8 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
     <Description>Contains the plugin to handle flattening instances of System.Text.Json's deserialized objects</Description>
-    <PackageTags>t</PackageTags>
+    <PackageTags></PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

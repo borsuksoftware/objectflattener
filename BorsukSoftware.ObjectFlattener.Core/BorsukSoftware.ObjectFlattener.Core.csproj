@@ -8,6 +8,14 @@
     <Description>Contains the framework and basic plugins for the object flattener library</Description>
     <Copyright>2021 Borsuk Software</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
