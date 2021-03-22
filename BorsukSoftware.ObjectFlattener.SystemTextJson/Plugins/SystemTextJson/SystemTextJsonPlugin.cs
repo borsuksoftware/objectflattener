@@ -4,6 +4,11 @@ using System.Text.Json;
 
 namespace BorsukSoftware.ObjectFlattener.Plugins.SystemTextJson
 {
+	/// <summary>
+	/// Plugin to flatten instances of <see cref="JsonElement"/> to their constituent properties
+	/// </summary>
+	/// <remarks>The underlying <see cref="JsonElement"/> instances don't contain enough information to detail precisely what
+	/// type of value they are conceptually so it's necessary to provide this information to the plugin</remarks>
 	public class SystemTextJsonPlugin : IObjectFlatteningPlugin
 	{
 		public NumberProcessingMode NumberProcessingMode { get; set; } = NumberProcessingMode.Double;

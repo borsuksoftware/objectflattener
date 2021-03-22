@@ -137,5 +137,27 @@ namespace BorsukSoftware.ObjectFlattener.Plugins
 			private string BillyBob;
 #pragma warning restore CS0649, CS0169
 		}
+
+		[Fact]
+		public void ValidateEnumsAreTreatedAsLeafTypes()
+		{
+			var plugin = new StandardPlugin();
+
+			var @object = new
+			{
+				enumValue = DateTimeKind.Local
+			};
+
+			var flattener = new ObjectFlattener();
+			flattener.Plugins.Add(plugin);
+
+			var output = flattener.FlattenObject(null, @object);
+			Assert.NotNull(output);
+			var outputAsList = output.ToList();
+			Assert.Single(outputAsList);
+
+			Assert.Equal("enumValue", outputAsList[0].Key);
+			Assert.Equal(DateTimeKind.Local, outputAsList[0].Value);
+		}
 	}
 }

@@ -17,6 +17,9 @@ namespace BorsukSoftware.ObjectFlattener
 		/// <remarks>The order is important here, the first plugin which matches will be used</remarks>
 		public IList<IObjectFlatteningPlugin> Plugins { get; private set; } = new List<IObjectFlatteningPlugin>();
 
+		/// <summary>
+		/// Get / set the desired behaviour when a suitable plugin cannot be found for a given source object
+		/// </summary>
 		public NoAvailablePluginBehaviour NoAvailablePluginBehaviour { get; set; } = NoAvailablePluginBehaviour.Throw;
 
 		#endregion
