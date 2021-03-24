@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using FluentAssertions;
 using Moq;
 using Xunit;
 
@@ -31,6 +32,74 @@ namespace BorsukSoftware.ObjectFlattener.Plugins
 				Assert.True(outputAsList.TryGetValue($"{prefix}[{i}]", out var val));
 				Assert.Equal($"-{i + 1}", val);
 			}
+		}
+
+		[Fact]
+		public void GenericList()
+		{
+			var list = new List<string>(new[] { "1", "bob", "bill" });
+
+			var plugin = new ListPlugin()
+			{
+				HandleGenericLists = true,
+				HandleNonGenericLists = false,
+				HandleReadOnlyLists = false
+			};
+			Assert.True(plugin.CanHandle(null, list));
+
+			var flattener = new ObjectFlattener();
+			flattener.Plugins.Add(new StandardPlugin());
+
+			var output = plugin.FlattenObject(flattener, null, list);
+			Assert.NotNull(output);
+
+			var outputAsList = output.ToList();
+
+			var expectedOutput = new[]
+			{
+				new KeyValuePair<string,object>( "[0]", "1"),
+				new KeyValuePair<string,object>( "[1]", "bob"),
+				new KeyValuePair<string,object>( "[2]", "bill")
+			};
+
+			outputAsList.Should().BeEquivalentTo(expectedOutput);
+		}
+
+		[Fact]
+		public void FSharpLists()
+		{
+			var list = new List<string>(new[] { "1", "bob", "bill" });
+
+			var fsharpList = new Microsoft.FSharp.Collections.FSharpList<string>("bill", Microsoft.FSharp.Collections.FSharpList<string>.Empty);
+			fsharpList = new Microsoft.FSharp.Collections.FSharpList<string>("bob", fsharpList);
+			fsharpList = new Microsoft.FSharp.Collections.FSharpList<string>("1", fsharpList);
+
+			var fsharpListAsManuallyFlattened = fsharpList.Select((item, idx) => new KeyValuePair<string, object>($"[idx]", item));
+			
+			// Check that we've flattened correctly..
+			list.Select((item, idx) => new KeyValuePair<string, object>($"[idx]", item)).
+			 	Should().
+			 	BeEquivalentTo(fsharpListAsManuallyFlattened);
+
+			var plugin = new ListPlugin();
+			Assert.True(plugin.CanHandle(null, fsharpList));
+
+			var flattener = new ObjectFlattener();
+			flattener.Plugins.Add(new StandardPlugin());
+
+			var output = plugin.FlattenObject(flattener, null, fsharpList);
+			Assert.NotNull(output);
+
+			var outputAsList = output.ToList();
+
+			var expectedOutput = new[]
+			{
+				new KeyValuePair<string,object>( "[0]", "1"),
+				new KeyValuePair<string,object>( "[1]", "bob"),
+				new KeyValuePair<string,object>( "[2]", "bill")
+			};
+
+			outputAsList.Should().BeEquivalentTo(expectedOutput);
 		}
 	}
 }
