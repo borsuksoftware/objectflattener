@@ -21,15 +21,37 @@ namespace BorsukSoftware.ObjectFlattener.Plugins
 	{
 		#region Data Model
 
+		/// <summary>
+		/// Get / set whether or not to handle instances of <see cref="Nullable{T}"/> as a leaf node
+		/// </summary>
 		public bool ProcessNullableTypesAsLeafTypes { get; set; } = true;
 
+		/// <summary>
+		/// Get / set whether or not to process enums as leaf types
+		/// </summary>
 		public bool ProcessEnumTypesAsLeafTypes { get; set; } = true;
 
+		/// <summary>
+		/// Get the set of leaf types
+		/// </summary>
+		/// <remarks>This can be altered on demand</remarks>
 		public ISet<Type> LeafTypes { get; private set; } = new HashSet<Type>();
 
+		/// <summary>
+		/// Get / set whether or not to extract properties from objects
+		/// </summary>
 		public bool ProcessProperties { get; set; } = true;
 
+		/// <summary>
+		/// Get / set whether or not to extract fields from objects
+		/// </summary>
 		public bool ProcessFields { get; set; } = false;
+
+		/// <summary>
+		/// Get / set whether or not to treat arrays as leaf objects
+		/// </summary>
+		/// <remarks>To operate in split mode, use <see cref="Plugins.ArrayPlugin"/> with a higher priority than this</remarks>
+		public bool ProcessArraysAsLeafType { get; set; } = true;
 
 		#endregion
 
@@ -71,15 +93,16 @@ namespace BorsukSoftware.ObjectFlattener.Plugins
 				yield break;
 			}
 
-			var objectType = @object.GetType();
-			if (this.LeafTypes.Contains(objectType) ||
-				(this.ProcessEnumTypesAsLeafTypes && objectType.IsEnum))
-			{
-				yield return new KeyValuePair<string, object>(prefix, @object);
-				yield break;
-			}
+            var objectType = @object.GetType();
+            if (this.LeafTypes.Contains(objectType) ||
+                (this.ProcessEnumTypesAsLeafTypes && objectType.IsEnum) ||
+                (objectType.IsArray && this.ProcessArraysAsLeafType))
+            {
+                yield return new KeyValuePair<string, object>(prefix, @object);
+                yield break;
+            }
 
-			if (this.ProcessNullableTypesAsLeafTypes &&
+            if (this.ProcessNullableTypesAsLeafTypes &&
 				objectType.IsGenericType &&
 				objectType.GetGenericTypeDefinition() == typeof(Nullable<>) &&
 				this.LeafTypes.Contains(objectType.GetGenericArguments()[0]))

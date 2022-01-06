@@ -43,6 +43,10 @@ namespace BorsukSoftware.ObjectFlattener.Plugins
 				dict["double"] = 2343.34;
 				dict["decimal"] = new decimal(2342.23);
 
+				dict["intarray"] = new int[] { 1, 2 };
+				dict["2darray"] = new int[4, 2];
+				dict["jaggedArray"] = new[] { new int[] { 1, 2 }, new int[] { 8, 9, 3, 1 } };
+
 				foreach (var pair in dict)
 					yield return new object[] { pair.Key, pair.Value };
 			}
