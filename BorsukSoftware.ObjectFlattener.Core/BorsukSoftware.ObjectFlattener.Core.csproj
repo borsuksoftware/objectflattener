@@ -6,7 +6,7 @@
     <Authors>Borsuk Software</Authors>
     <Company>Borsuk Software</Company>
     <Description>Contains the framework and basic plugins for the object flattener library</Description>
-    <Copyright>2021 Borsuk Software</Copyright>
+    <Copyright>2021-22 Borsuk Software</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

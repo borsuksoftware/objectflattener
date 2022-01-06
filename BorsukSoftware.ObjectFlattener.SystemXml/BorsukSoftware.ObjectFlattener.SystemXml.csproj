@@ -11,6 +11,8 @@
     <FileVersion>1.0.1.0</FileVersion>
     <Version>1.0.1</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Authors>Borsuk Software</Authors>
+    <Copyright>2022 Borsuk Software</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
