@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<myDoc rootAttr="3">
+  <childNode1>
+    <childNode11>
+      <childNode112 attr="bob"/>
+    </childNode11>
+    <childNode12></childNode12>
+    <childNode13 />
+    <childNode14>Free format text</childNode14>
+  </childNode1>
+</myDoc>

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlatte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlattener.JsonDotNet", "BorsukSoftware.ObjectFlattener.JsonDotNet\BorsukSoftware.ObjectFlattener.JsonDotNet.csproj", "{A0A2BFD0-774A-49EE-B3A4-DC8BFB717701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.ObjectFlattener.SystemTextJson", "BorsukSoftware.ObjectFlattener.SystemTextJson\BorsukSoftware.ObjectFlattener.SystemTextJson.csproj", "{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlattener.SystemTextJson", "BorsukSoftware.ObjectFlattener.SystemTextJson\BorsukSoftware.ObjectFlattener.SystemTextJson.csproj", "{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.ObjectFlattener.SystemXml", "BorsukSoftware.ObjectFlattener.SystemXml\BorsukSoftware.ObjectFlattener.SystemXml.csproj", "{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

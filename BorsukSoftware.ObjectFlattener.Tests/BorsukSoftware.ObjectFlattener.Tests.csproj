@@ -9,6 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\SystemXmlPluginTests\sampleXml.xml" />
+    <None Remove="Resources\SystemXmlPluginTests\sampleXmlCustomNames.xml" />
+    <None Remove="Resources\SystemXmlPluginTests\sampleXmlDuplicates.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SystemXmlPluginTests\sampleXmlDuplicates.xml" />
+    <EmbeddedResource Include="Resources\SystemXmlPluginTests\sampleXmlCustomNames.xml" />
+    <EmbeddedResource Include="Resources\SystemXmlPluginTests\sampleXml.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="FSharp.Core" Version="5.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
@@ -22,6 +34,7 @@
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.JsonDotNet\BorsukSoftware.ObjectFlattener.JsonDotNet.csproj" />
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.SystemTextJson\BorsukSoftware.ObjectFlattener.SystemTextJson.csproj" />
+    <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.SystemXml\BorsukSoftware.ObjectFlattener.SystemXml.csproj" />
   </ItemGroup>
 
 </Project>

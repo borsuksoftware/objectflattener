@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<myDoc >
+  <childNode1>
+    <childNode name="bob1" />
+    <childNode name="bob2" />
+    <childNode2 name="bab" />
+    <childNode name="bob3" />
+  </childNode1>
+</myDoc>
