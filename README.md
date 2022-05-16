@@ -21,6 +21,7 @@ There are existing plugins to handle:
 * Filter based - can provide a filter function around an existing plugin
 * Json.Net documents
 * System.Text.Json documents
+* System.Xml documents / nodes
 
 ## FAQs
 #### The flattening isn't working in the way that I was expecting
@@ -41,6 +42,12 @@ Knowing how to take a dictionary's key objects and render them as a string isn't
 
 #### I'm writing a custom plugin to handle my own data structure, do I need to flatten the data structure down or can I keep it intact?
 The choice is entirely up to you depending on how you're going to consume the results, i.e. although we do have plugins which can flatten deserialized representations of Json documents, it's perfectly plausible for a user to have a use-case where they'd rather keep the document intact and that's absolutely fine. It's your data, you can choose.
+
+#### I have an XML schema with multiple, indentically named child nodes, how do I handle this?
+The XML plugin gives a few options around naming conventions which can function out of the box. Additional, it can operate in a 'custom func' mode whereby the user is given a callback for a given node. This allows a user to, for example, extract an attribute from a child node and use that to flavour the returned key. To see an example of this, look at the unit tests for the plugin.
+
+#### Why are there multiple DLLs / packages rather than a single one containing everything
+This is to avoid the case where additional libraries would be imported into consumers' apps which weren't required by their use-cases.
 
 #### I have a bug fix / performance improvement / new feature idea, what do I do?
 Either raise an issue in this repository or contact us.
