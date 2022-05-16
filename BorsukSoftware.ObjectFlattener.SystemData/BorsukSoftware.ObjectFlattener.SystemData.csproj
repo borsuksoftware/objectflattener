@@ -4,15 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
 	  <Company>Borsuk Software</Company>
-	  <Description>Contains the plugin to handle flattening instances of Json.net's deserialized objects</Description>
+	  <Description>Contains the plugin to handle flattening instances of System.Data.* objects</Description>
 	  <Authors>Borsuk Software</Authors>
 	  <Copyright>2021 Borsuk Software</Copyright>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageIcon>logo.png</PackageIcon>
 	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	  <AssemblyVersion>1.0.1.0</AssemblyVersion>
-	  <FileVersion>1.0.1.0</FileVersion>
-	  <Version>1.0.1</Version>
+	  <AssemblyVersion>1.0.2.0</AssemblyVersion>
+	  <FileVersion>1.0.2.0</FileVersion>
+	  <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
