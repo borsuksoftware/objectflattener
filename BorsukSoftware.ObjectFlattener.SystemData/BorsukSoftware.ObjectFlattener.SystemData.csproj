@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <RootNamespace>BorsukSoftware.ObjectFlattener</RootNamespace>
+	  <Company>Borsuk Software</Company>
+	  <Description>Contains the plugin to handle flattening instances of Json.net's deserialized objects</Description>
+	  <Authors>Borsuk Software</Authors>
+	  <Copyright>2021 Borsuk Software</Copyright>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageIcon>logo.png</PackageIcon>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <AssemblyVersion>1.0.1.0</AssemblyVersion>
+	  <FileVersion>1.0.1.0</FileVersion>
+	  <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\BorsukSoftware.ObjectFlattener.SystemData.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\BorsukSoftware.ObjectFlattener.SystemData.xml</DocumentationFile>
+  </PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\logo.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
+	</ItemGroup>
+</Project>

@@ -7,9 +7,12 @@
 /BorsukSoftware.ObjectFlattener.Core/obj
 /BorsukSoftware.ObjectFlattener.JsonDotNet/bin
 /BorsukSoftware.ObjectFlattener.JsonDotNet/obj
-/BorsukSoftware.ObjectFlattener.Tests/bin
-/BorsukSoftware.ObjectFlattener.Tests/obj
+/BorsukSoftware.ObjectFlattener.SystemData/obj
+/BorsukSoftware.ObjectFlattener.SystemData/bin
 /BorsukSoftware.ObjectFlattener.SystemTextJson/bin
 /BorsukSoftware.ObjectFlattener.SystemTextJson/obj
 /BorsukSoftware.ObjectFlattener.SystemXml/obj
 /BorsukSoftware.ObjectFlattener.SystemXml/bin
+/BorsukSoftware.ObjectFlattener.Tests/bin
+/BorsukSoftware.ObjectFlattener.Tests/obj
+/output

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlattener.Core", "BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj", "{7534D814-AE18-4D52-BD35-C2393B6C89EE}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlatte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlattener.SystemTextJson", "BorsukSoftware.ObjectFlattener.SystemTextJson\BorsukSoftware.ObjectFlattener.SystemTextJson.csproj", "{4DF63D13-B9B1-4EF3-AFD3-1CFF30A18545}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.ObjectFlattener.SystemXml", "BorsukSoftware.ObjectFlattener.SystemXml\BorsukSoftware.ObjectFlattener.SystemXml.csproj", "{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorsukSoftware.ObjectFlattener.SystemXml", "BorsukSoftware.ObjectFlattener.SystemXml\BorsukSoftware.ObjectFlattener.SystemXml.csproj", "{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.ObjectFlattener.SystemData", "BorsukSoftware.ObjectFlattener.SystemData\BorsukSoftware.ObjectFlattener.SystemData.csproj", "{6B4A2B50-4667-459D-87C6-16C95E778B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA17BAB-751B-42E7-8D0D-062F240F8BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4A2B50-4667-459D-87C6-16C95E778B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4A2B50-4667-459D-87C6-16C95E778B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4A2B50-4667-459D-87C6-16C95E778B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4A2B50-4667-459D-87C6-16C95E778B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

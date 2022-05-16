@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
@@ -33,6 +33,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.Core\BorsukSoftware.ObjectFlattener.Core.csproj" />
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.JsonDotNet\BorsukSoftware.ObjectFlattener.JsonDotNet.csproj" />
+    <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.SystemData\BorsukSoftware.ObjectFlattener.SystemData.csproj" />
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.SystemTextJson\BorsukSoftware.ObjectFlattener.SystemTextJson.csproj" />
     <ProjectReference Include="..\BorsukSoftware.ObjectFlattener.SystemXml\BorsukSoftware.ObjectFlattener.SystemXml.csproj" />
   </ItemGroup>
