@@ -20,6 +20,7 @@ There are existing plugins to handle:
 * Function based - the plumbing for users to add additional functionality
 * Filter based - can provide a filter function around an existing plugin
 * Json.Net documents
+* System.Data objects
 * System.Text.Json documents
 * System.Xml documents / nodes
 
